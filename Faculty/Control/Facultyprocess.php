@@ -38,16 +38,7 @@
 
         }
 
-        $gender=$_REQUEST["gender"];
-        if(isset($gender))
-        {
-            
-            $gendererror= "your gender is ". $gender;
-        }
-        else{
-            $gendererror= "your gender is not set";
-            $haserror=1;
-        }
+       
 
         $phone = $_REQUEST["phone"];
         if(empty($phone))
@@ -59,7 +50,7 @@
             $phoneerror= "your number is ". $phone;
 
         }
-
+        
         $eduq = $_REQUEST["eduq"];
         if(empty($eduq))
         {

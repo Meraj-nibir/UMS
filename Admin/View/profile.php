@@ -6,39 +6,41 @@
     <head>   
         <title>  
              Profile Page  
-        </title>  
+        </title>
+        <link rel="stylesheet" type="text/css" href="../../Style/style.css">   
     </head>  
-    <body bgcolor="white"> 
+    <body> 
         <?php
             include '..\..\Layout\header.php';
         ?> 
         <br>
-        <form style="margin-left:auto; margin-right:auto; text-align:left;" action="" method="POST" enctype="multipart/form-data">
-        hellow user
-            <?php
-                echo $_SESSION["email"];
-            ?>
-            <br>
-            <br>
-            <hr>
-            <a href="ShowAllUser.php">Show all users</a>
+        <div >
+            <form action="" method="POST" enctype="multipart/form-data">
+            hellow user
+                <?php
+                    echo $_SESSION["email"];
+                ?>
+                <br>
+                <br>
+                <br>
 
-            <br>First Name:<?php echo $fname;?>
-            <br>Middle Name:<?php echo $mname;?>
-            <br>Last Name:<?php echo $lname;?>
-            <br>Email:<?php echo $email;?>
-            <br>Gender:<?php echo $gender;?>
-            <br>Address:<?php echo $address;?>
-            <br>Profile Picture:
-            <br><img src="<?php echo $_FILES;?>" width="100px" height="100px">
-            <br>
-            <br>
-            <tr>
-                <td><a href="..\Control\logout.php">Log out</a></td>
-            </tr>
-            <?php
-                include '..\..\Layout\footer.php';
-            ?>
-        </form>
+                <br>First Name:<?php echo $fname;?>
+                <br>Middle Name:<?php echo $mname;?>
+                <br>Last Name:<?php echo $lname;?>
+                <br>Email:<?php echo $email;?>
+                <br>Gender:<?php echo $gender;?>
+                <br>Address:<?php echo $address;?>
+                <br>Profile Picture:
+                <br><img src="<?php echo $_FILES;?>" width="100px" height="100px">
+                <br>
+                <br>
+                <tr>
+                    <td><a href="AdminHome.php"><input type="button" class="button reset" value="Back"></a></td>
+                </tr>
+                <?php
+                    include '..\..\Layout\footer.php';
+                ?>
+            </form>
+        </div>
     <body>
 </html>

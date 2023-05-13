@@ -7,16 +7,17 @@ include '../control/AdminUpdateControl.php';
         <title>  
             Admin Details Update Page  
         </title>  
+        <link rel="stylesheet" type="text/css" href="../../Style/style.css">
     </head>  
     <body bgcolor="white">
 
         <?php
             include '..\..\Layout\header.php';
         ?>
-        <h1 style="margin-left:auto; margin-right:auto; text-align:center;">Admin Update Page</h1>   
-        <form style="margin-left:auto; margin-right:auto; text-align:left;" action="" method="POST" enctype="multipart/form-data">  
+        <h1 class="h1">Admin Update Page</h1>   
+        <form action="" method="POST" enctype="multipart/form-data" onsubmit="return validateForm()">  
         <br> <br>
-            <table>
+            <table class="table">
                 <tr>
                     <td>
                         First name: 
@@ -113,11 +114,11 @@ include '../control/AdminUpdateControl.php';
 
                 <tr>
                     <td>
-                        <input type="submit" name="Update" value="Update"/> 
+                        <input type="submit" name="Update" class="button submit" value="Update"/> 
                     </td>
                     
                     <td>
-                        <a href="ShowAllUser.php">Back</a>
+                        <a href="ShowAlladmin.php"><input type="button" class="button" value="Back"></a>
                     </td>
                 </tr>
 

@@ -7,44 +7,46 @@ include ('../control/login_control.php');
     <head>   
         <title>  
             Login Page  
-        </title>  
+        </title>
+         
     </head>  
-    <body bgcolor="white"> 
+    <body> 
         
         <?php
             include '..\..\Layout\header.php';
         ?>
         <h1 >Login Page</h1> 
-
-        <form action="" method="POST">
-            
-            <table>
-                <tr>
-                    <td>
-                        Email:
-                    </td>
-                    <td>
-                        <input type="text" name="email"> <?php echo $emailerror ?>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Password:
-                    </td>
-                    <td>
-                        <input type="password" name="pass"> <?php echo $passerror ?>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="submit" name="login" value="Log In">
-                    </td>
-                    <td>
-                        <a href="..\..\home.php">Back</a>
-                    </td>
-                </tr>
-            </table>
-        </form>
+        <div>
+            <form action="" method="POST">
+                <table class="table">
+                    <tr>
+                        <td>
+                            Email:
+                        </td>
+                        <td>
+                            <input type="text" name="email" placeholder="Enter your email"> <?php echo $emailerror ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Password:
+                        </td>
+                        <td>
+                            <input type="password" name="pass" placeholder="Enter your password"> <?php echo $passerror ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="submit" class="button submit" name="login" value="Log In">
+                        </td>
+                        <td></td>
+                        <td>
+                            <a href="..\..\home.php"><input type="button" class="button" value="Back"></a>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
         <br>
         <br>
         <br>

@@ -5,16 +5,17 @@
         <title>  
             Registration Page
         </title>
+        <link rel="stylesheet" type="text/css" href="Style/style.css">
     </head>
 
-    <body bgcolor = "white" >
+    <body>
         <?php
             include 'Layout\header.php';
         ?>
         
-        <h1 style="margin-left:auto; margin-right:auto; text-align:center;">Register as</h1>
+        <h1 class="h1">Register as</h1>
         <Form >
-            <table style="margin-left:auto; margin-right:auto; text-align:center;">
+            <table class="table">
                 <br>
                 <br>
                 <br>
@@ -91,7 +92,7 @@
                 </tr>
                 
             </table>
-            <a href="home.php"><h2>Back</h2></a>
+            <a href="home.php"><h2 class="h1">Back</h2></a>
         </Form>
 
         <br>

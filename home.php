@@ -4,15 +4,16 @@
         <title>  
             Home Page
         </title>
+        <link rel="stylesheet" type="text/css" href="Style/style.css">
     </head>
 
-    <body bgcolor = "white">
+    <body class="body">
         <?php
             include 'Layout\header.php';
         ?>
-        <h1 style="margin-left:auto; margin-right:auto; text-align:center;">Login as</h1>  
+        <h1 class="h1">Login as</h1>  
         <Form >
-            <table style="margin-left:auto; margin-right:auto; text-align:center;">
+            <table class="table">
                 <br>
                 <br>
                 <br>
@@ -82,7 +83,7 @@
                 </tr>
             </table>
         </Form>
-        <h3 style="margin-left:auto; margin-right:auto; text-align:center;" ><a href="RegistrationPage.php">Haven't ragistration yet? Resgistration from here.</a></h3>
+        <h3 class="h1" ><a href="RegistrationPage.php">Haven't ragistration yet? Resgistration from here.</a></h3>
         <br>
         <br>
         <br>

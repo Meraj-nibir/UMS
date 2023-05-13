@@ -46,6 +46,13 @@ class MyDB{
         return $result;
     }
 
+    function searchUser($tablename, $conn, $email)
+    {
+        $sql="SELECT * FROM $tablename WHERE email = '$email'";
+        $result = $conn->query($sql);
+        return $result;
+    }
+
 }
 
 
