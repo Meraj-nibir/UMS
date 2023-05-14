@@ -5,17 +5,17 @@ class MyDB{
         $conn = new mysqli("localhost","root","","Project");
         return $conn;
     }
-    function insertData($tablename,$firstname,$middlename,$lastname,$gender,$phone,$address,$email,
-    $pass,$file,$conn){
-        $sql="INSERT INTO $tablename (firstname,middlename,lastname,gender,phone,address,email,pass
-        ,file) VALUES ('$firstname','$middlename','$lastname','$gender','$phone','$address','$email',
-        '$pass','$file')";
+    function insertData($tablename,$firstname,$lastname,$gender,$phone,$email,$address,$eduq,$pdep,$tex,$psub,$pass,$conn){
+        $sql="INSERT INTO $tablename (Firstname,Lastname,Gender,Phone,Email,Address,Education_quali,
+        Preferable_dept,Teaching_exp,Preferable_sub,Password) 
+        VALUES ('$firstname','$lastname','$gender','$phone','$email','$address','$eduq','$pdep','$tex','$psub',
+        '$pass')";
         $result=$conn->query($sql);
         return $result;
     }
     function checkUser($tablename, $email, $pass, $conn){
         $sql="SELECT * FROM $tablename WHERE email='$email' AND 
-        pass='$pass'";
+        Password='$pass'";
         $result=$conn->query($sql);
     return $result;
     }

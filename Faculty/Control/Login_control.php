@@ -3,7 +3,7 @@ session_start();
 include "../model/mydb.php";
 if(!empty($_SESSION["email"]))
 {
-    header("Location: ../view/profile.php");
+    header("Location: ../view/FacutyProfile.php");
 }
 
 
@@ -26,12 +26,12 @@ if(isset($_REQUEST["login"]))
     else{
         $mydb= new MyDB();
         $conobj=$mydb->openCon();
-        $result=$mydb->checkUser("Admin",$_REQUEST["email"], $_REQUEST["pass"],
+        $result=$mydb->checkUser("Faculty",$_REQUEST["email"], $_REQUEST["pass"],
         $conobj);  
         if($result->num_rows >0)
         {
             $_SESSION["email"]=$_REQUEST["email"];
-            header("Location: ../view/profile.php");
+            header("Location: ../view/FacultyProfile.php");
         } 
         else
         {

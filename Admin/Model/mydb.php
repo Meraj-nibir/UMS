@@ -27,7 +27,7 @@ class MyDB{
     }
 
     function getAllUsers($tablename,$conn){
-        $sql=$sql="SELECT * FROM $tablename";
+        $sql="SELECT * FROM $tablename";
         $result=$conn->query($sql);
         return $result;
     }

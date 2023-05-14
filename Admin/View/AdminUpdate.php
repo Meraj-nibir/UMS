@@ -7,9 +7,8 @@ include '../control/AdminUpdateControl.php';
         <title>  
             Admin Details Update Page  
         </title>  
-        <link rel="stylesheet" type="text/css" href="../../Style/style.css">
     </head>  
-    <body bgcolor="white">
+    <body>
 
         <?php
             include '..\..\Layout\header.php';

@@ -1,15 +1,6 @@
 *{
-  background-color: rgb(43, 219, 102);
+  background-color: blanchedalmond;
 }
-#pcustome{
-    color:white;
-    background-color: #357fe7;
-    border-left: #0e3b7b 10px solid;
-    width: 100px;
-    position: relative;
-    left: 200px;
-}
-
 .admin_home{
 	min-height:450px;
 	padding:20px;
@@ -23,24 +14,24 @@
 	text-align:center;
 }
 .section ul{
-	margin:0;
-	padding:0;
-	border:1px solid #ddd;
-	list-style:none;
+	margin: 0;
+  padding: 0;
+  border: 1px solid #ddd;
+  list-style: none;
 }
 .section ul li{
-	border:1px solid #ddd;
+	border: 3px solid #1421b1;
 }
 .section ul li a{
-	display:block;
-	padding:20px;
-	color:#006f61;
-	text-align:center;
-	text-decoration:none;
-	
+	display: block;
+  padding: 20px;
+  color: #ff0000;
+  text-align: center;
+  text-decoration: none;
 }
+
 .section ul li a:hover{
-	background:#ddd;
+	background:#ffffff;
 }
 
 

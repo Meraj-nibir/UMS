@@ -1,4 +1,16 @@
 <?php
+    include("../model/mydb.php");
+    $printcookie="";
+    setcookie("visit","1",time()+36000);
+    if(isset($_COOKIE["visit"]))
+    {
+        $printcookie= "visited";
+    }
+    else
+    {
+        $printcookie= "welcome";
+    }
+
     $fnameerror="";
     $lnameerror="";
     $gendererror="";
@@ -11,6 +23,7 @@
     $pdeperror="";
     $texerror="";
     $psuberror="";
+    $passerror="";
 
     if(isset($_REQUEST["Submit"]))
     {
@@ -95,6 +108,17 @@
 
         }
 
+        $pass = $_REQUEST["pass"];
+        if(empty($pass))
+        {
+            $passerror= "your password invalid";
+            $haserror=1;
+        }
+        else{
+            $passerror= "your password is ". $pass;
+
+        }
+
         $address = $_REQUEST["address"];
         if(empty($address))
         {
@@ -139,9 +163,9 @@
         {
             $mydb= new MyDB();
             $conobj= $mydb->openCon();
-            $result=$mydb->insertData("Faculty",$_REQUEST["firstname"],$_REQUEST["lastname"],
-            $_REQUEST["gender"],$_REQUEST["phone"],$_REQUEST["address"],$_REQUEST["email"],$_REQUEST["pass"],
-            "../uploads/".$_REQUEST["email"].".jpg",$conobj);
+            $result=$mydb->insertData("faculty",$_REQUEST["firstname"],$_REQUEST["lastname"],
+            $_REQUEST["gender"],$_REQUEST["phone"],$_REQUEST["email"],$_REQUEST["address"],$_REQUEST["eduq"],
+            $_REQUEST["pdep"],$_REQUEST["tex"],$_REQUEST["psub"],$_REQUEST["pass"],$conobj);
             if($result===TRUE)
             {
                 echo "Success";

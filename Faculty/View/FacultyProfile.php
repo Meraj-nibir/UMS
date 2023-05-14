@@ -8,7 +8,7 @@
              Profile Page  
         </title>  
     </head>  
-    <body bgcolor="white"> 
+    <body> 
         <?php
             include '..\..\Layout\header.php';
         ?> 
@@ -21,8 +21,8 @@
         <br>
         <hr>
 
-        <br>First Name:<?php echo $firstname;?>
-        <br>Last Name:<?php echo $lastname;?>
+        <br>First Name:<?php echo $fname;?>
+        <br>Last Name:<?php echo $lname;?>
         <br>Email:<?php echo $email;?>
         <br>Gender:<?php echo $gender;?>
         <br>Profile Picture:

@@ -9,16 +9,16 @@ include ('../control/Login_control.php');
             Login Page  
         </title>  
     </head>  
-    <body bgcolor="white"> 
+    <body> 
         
         <?php
             include '..\..\Layout\header.php';
         ?>
-        <h1 >Login Page</h1> 
+        <h1 class="h1">Login Page</h1> 
 
         <form action="" method="POST">
             
-            <table>
+            <table class="table">
                 <tr>
                     <td>
                         Email:
@@ -37,10 +37,11 @@ include ('../control/Login_control.php');
                 </tr>
                 <tr>
                     <td>
-                        <input type="submit" name="login" value="Log In">
+                        <input type="submit" class="button submit" name="login" value="Log In">
                     </td>
+                    <td></td>
                     <td>
-                        <a href="..\..\home.php">Back</a>
+                        <a href="..\..\home.php"><input type="button" class="button" value="Back"></a>
                     </td>
                 </tr>
             </table>

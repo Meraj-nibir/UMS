@@ -8,15 +8,15 @@ include '../control/Facultyprocess.php';
             Registration Page  
         </title>  
     </head>  
-    <body bgcolor="white">
+    <body>
 
         <?php
             include '..\..\Layout\header.php';
         ?>
-        <h1>Faculty Registration Page</h1>   
+        <h1 class="h1">Faculty Registration Page</h1>   
         <form action="" method="POST" enctype="multipart/form-data" onsubmit="return validateFrom()">  
         <br> <br>
-            <table>
+            <table class="table">
                 <tr>
                     <td>
                         First name: 
@@ -155,7 +155,7 @@ include '../control/Facultyprocess.php';
                     </td>
                 </tr>
 
-               <!-- <tr>
+                <tr>
                     <td>
                         Password:
                     </td>
@@ -171,17 +171,17 @@ include '../control/Facultyprocess.php';
                     <td>
                         <input type="Password" id="repass" name="repass">
                     </td>
-                </tr>-->
+                </tr>
 
                 <tr>
                     <td>
-                        <input type="submit" name="Submit" value="Submit"/> 
+                        <input type="submit" class="button submit" name="Submit" value="Submit"/> 
                     </td>
                     <td>
-                        <input type="reset" name="Reset" value="Reset"/> 
+                        <input type="reset" class="button reset" name="Reset" value="Reset"/> 
                     </td>
                     <td>
-                        <a href="..\..\RegistrationPage.php">Back</a>
+                        <a href="..\..\RegistrationPage.php"><input type="button" class="button" value="Back"></a>
                     </td>
                 </tr>
             </table>

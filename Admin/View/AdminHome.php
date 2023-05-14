@@ -3,8 +3,6 @@
         <title>  
             Admin Home Page  
         </title>
-        <link rel="stylesheet" type="text/css" href="/Project/Style/style.css"> 
-        
     </head>  
     <body>
         <?php
@@ -31,13 +29,13 @@
             <div class="section">
                     <h3>Faculty</h3>
                     <ul>
-                        <li><a href="#">View All Faculty</a></li>
+                        <li><a href="ShowAllFaculty.php">View All Faculty</a></li>
                         <li><a href="#">Search Faculty</a></li>
                     </ul>
             </div>
             <div class="section">
             
-                    <h3>Registry</h3>
+                    <h3>Staff</h3>
                     <ul>
                         <li><a href="#">View All Staff</a></li>
                         <li><a href="#">Search Staff</a></li>

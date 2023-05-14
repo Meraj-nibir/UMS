@@ -1,32 +1,30 @@
 <?php
-    include "..\Control\show_all_user_process.php"
+    include "..\Control\showAllFacultyProcess.php"
 ?>
 
 <html>
     <head>   
         <title>  
-             All Admin page  
+             All user page  
         </title> 
     </head>  
     <body> 
         <?php
             include '..\..\Layout\header.php';
         ?>
-        <h1 class="h1">All Admin's Details</h1> 
+        <h1 class="h1">All Faculty's Details</h1> 
         <br>
         <?php
             if($result->num_rows>0){
                 echo "<table class='table'>";
-                echo "<tr><th>First Name</th> <th>Middle Name</th> <th>Last Name</th> <th>Email</th> <th>Gender</th> <th>Address</th> <th>File</th></tr>";
+                echo "<tr><th>First Name</th> <th>Last Name</th> <th>Email</th> <th>Gender</th> <th>Address</th>";
                 while($row=$result->fetch_assoc()){
                     echo "<tr>";
                     echo "<td>".$row["Firstname"]."</td>";
-                    echo "<td>".$row["Middlename"]."</td>";
                     echo "<td>".$row["Lastname"]."</td>";
                     echo "<td>".$row["Email"]."</td>";
                     echo "<td>".$row["Gender"]."</td>";
                     echo "<td>".$row["Address"]."</td>";
-                    echo "<td>".$row["File"]."</td>" ;
                     echo "<td>"."<a href ='AdminUpdate.php?email=".$row["Email"]."'><input type='button' class='button edit' value='Edit'></a>"."</td>" ;
                     echo "<td>"."<a href ='AdiminDelete.php?email=".$row["Email"]."'><input type='button'class='button reset' value='Delete'></a>"."</td>" ;
                     echo "</tr>";

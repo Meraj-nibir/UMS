@@ -7,9 +7,7 @@
         <title>  
              Profile Page  
         </title>
-        <link rel="stylesheet" type="text/css" href="../../Style/style.css">   
-    </head>  
-    <body> 
+    <body class="body"> 
         <?php
             include '..\..\Layout\header.php';
         ?> 
