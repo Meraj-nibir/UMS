@@ -7,8 +7,8 @@ class MyDB{
     }
     function insertData($tablename,$firstname,$middlename,$lastname,$gender,$phone,$address,$email,
     $pass,$file,$conn){
-        $sql="INSERT INTO $tablename (firstname,middlename,lastname,gender,phone,address,email,pass
-        ,file) VALUES ('$firstname','$middlename','$lastname','$gender','$phone','$address','$email',
+        $sql="INSERT INTO $tablename (Firstname,Middlename,Lastname,Gender,Phone,Address,Email,pass
+        ,File) VALUES ('$firstname','$middlename','$lastname','$gender','$phone','$address','$email',
         '$pass','$file')";
         $result=$conn->query($sql);
         return $result;
@@ -32,10 +32,18 @@ class MyDB{
         return $result;
     }
 
-    function updateUser($tablename, $firstname,$middlename,$lastname,$gender,$phone,$address,$email,
-    $pass,$file,$conn){
-        $sql="UPDATE $tablename SET $firstname='$fname',$middlename='$mname',$lastname='$lname',$gender='$gender',$phone='$phone',$address='$address',
-        $pass='$pass',$files='$file' WHERE $email='$email'";
+    function updateAdmin($tablename,$conn,$firstname,$middlename,$lastname,$gender,$phone,$address,$email,
+    $pass){
+        $sql="UPDATE $tablename SET firstname='$firstname',middlename='$middlename',lastname='$lastname',gender='$gender',phone='$phone',address='$address',
+        pass='$pass' WHERE Email='$email'";
+        $result=$conn->query($sql);
+        return $result;
+    }
+
+    function updateFaculty($tablename,$conn, $firstname,$lastname,$gender,$phone,$address,$email,
+    $pass){
+        $sql="UPDATE $tablename SET firstname='$firstname',lastname='$lastname',gender='$gender',phone='$phone',address='$address',
+        password='$pass'WHERE Email='$email'";
         $result=$conn->query($sql);
         return $result;
     }
@@ -48,7 +56,7 @@ class MyDB{
 
     function searchUser($tablename, $conn, $email)
     {
-        $sql="SELECT * FROM $tablename WHERE email = '$email'";
+        $sql="SELECT * FROM $tablename WHERE Email = '$email'";
         $result = $conn->query($sql);
         return $result;
     }

@@ -5,7 +5,6 @@
         <title>  
             Registration Page
         </title>
-        <link rel="stylesheet" type="text/css" href="Style/style.css">
     </head>
 
     <body>

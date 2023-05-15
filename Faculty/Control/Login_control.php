@@ -3,7 +3,7 @@ session_start();
 include "../model/mydb.php";
 if(!empty($_SESSION["email"]))
 {
-    header("Location: ../view/FacutyProfile.php");
+    header("Location: ../view/FacultyHome.php");
 }
 
 
@@ -31,7 +31,7 @@ if(isset($_REQUEST["login"]))
         if($result->num_rows >0)
         {
             $_SESSION["email"]=$_REQUEST["email"];
-            header("Location: ../view/FacultyProfile.php");
+            header("Location: ../view/FacultyHome.php");
         } 
         else
         {

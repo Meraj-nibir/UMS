@@ -194,6 +194,6 @@ include '../control/Facultyprocess.php';
         <?php
             include '..\..\Layout\footer.php';
         ?>
-        <script src="JavaScript.js"></script> 
+        <script src="..\JavaScript\JavaScript.js"></script> 
     </body>  
 </html> 

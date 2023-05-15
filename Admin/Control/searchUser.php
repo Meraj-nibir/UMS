@@ -1,22 +1,23 @@
 <?php
-include ("../model/mydb.php");
+include("../model/mydb.php");
 
-$email=$_REQUEST["Email"];
+$email = $_REQUEST["Email"];
 
 
 
 $mydb= new MyDB();
 $conobj=$mydb->openCon();
-$result=$mydb->searchUser("Admin", $conobj, $email);
+$result=$mydb->searchUser("admin", $conobj, $email);
 if($result->num_rows > 0)
 {
     while($row=$result->fetch_assoc()){
-        $fname=$row["firstname"];
-        $lname=$row["lastname"];
-        $email=$row["email"];
-        $gender=$row["gender"];
-        $file=$row["file"];
-        echo "name: ".$fname.$lname.$email.$gender.$file;
+        $fname=$row["Firstname"];
+        $mname=$row["Middlename"];
+        $lname=$row["Lastname"];
+        $email=$row["Email"];
+        $gender=$row["Gender"];
+        $file=$row["File"];
+        echo "name: ".$fname.$mname.$lname.$email.$gender.$file;
     }
 }
 else

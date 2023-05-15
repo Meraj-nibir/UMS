@@ -2,14 +2,16 @@
     session_start();
     include("../model/mydb.php");
 
-    $fname=$mname=$lname=$gender=$email=$address=$_FILES="";
+    
+    $fname=$mname=$lname=$gender=$address=$email=$_FILES="";
     if(empty($_SESSION["email"])){
         header("Location:../view/login.php");
     }
 
+
     $mydb=new MyDB();
     $conobj=$mydb->openCon();
-    $result=$mydb->getUserInfo("admin","abc@gmail.com",$conobj);
+    $result=$mydb->getUserInfo("admin",$_SESSION["email"],$conobj);
     
     if($result->num_rows>0){
         

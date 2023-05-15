@@ -5,11 +5,11 @@ class MyDB{
         $conn = new mysqli("localhost","root","","Project");
         return $conn;
     }
-    function insertData($tablename,$firstname,$lastname,$gender,$phone,$email,$address,$eduq,$pdep,$tex,$psub,$pass,$conn){
+    function insertData($tablename,$firstname,$lastname,$gender,$phone,$email,$address,$eduq,$pdep,$tex,$psub,$pass,$file,$conn){
         $sql="INSERT INTO $tablename (Firstname,Lastname,Gender,Phone,Email,Address,Education_quali,
-        Preferable_dept,Teaching_exp,Preferable_sub,Password) 
+        Preferable_dept,Teaching_exp,Preferable_sub,Password,File) 
         VALUES ('$firstname','$lastname','$gender','$phone','$email','$address','$eduq','$pdep','$tex','$psub',
-        '$pass')";
+        '$pass','$file')";
         $result=$conn->query($sql);
         return $result;
     }
@@ -26,16 +26,11 @@ class MyDB{
         return $result; 
     }
 
-    function getAllUsers($tablename,$conn){
-        $sql=$sql="SELECT * FROM $tablename";
-        $result=$conn->query($sql);
-        return $result;
-    }
 
-    function updateUser($tablename, $firstname,$middlename,$lastname,$gender,$phone,$address,$email,
-    $pass,$file,$conn){
-        $sql="UPDATE $tablename SET $firstname='$fname',$middlename='$mname',$lastname='$lname',$gender='$gender',$phone='$phone',$address='$address',
-        $pass='$pass',$files='$file' WHERE $email='$email'";
+    function updateFaculty($tablename,$conn,$firstname,$lastname,$gender,$phone,$address,$email,
+    $pass){
+        $sql="UPDATE $tablename SET firstname='$firstname',lastname='$lastname',gender='$gender',phone='$phone',address='$address',
+        password='$pass'WHERE Email='$email'";
         $result=$conn->query($sql);
         return $result;
     }

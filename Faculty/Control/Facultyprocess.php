@@ -165,7 +165,8 @@
             $conobj= $mydb->openCon();
             $result=$mydb->insertData("faculty",$_REQUEST["firstname"],$_REQUEST["lastname"],
             $_REQUEST["gender"],$_REQUEST["phone"],$_REQUEST["email"],$_REQUEST["address"],$_REQUEST["eduq"],
-            $_REQUEST["pdep"],$_REQUEST["tex"],$_REQUEST["psub"],$_REQUEST["pass"],$conobj);
+            $_REQUEST["pdep"],$_REQUEST["tex"],$_REQUEST["psub"],$_REQUEST["pass"],
+            "../uploads/".$_REQUEST["email"].".jpg",$conobj);
             if($result===TRUE)
             {
                 echo "Success";

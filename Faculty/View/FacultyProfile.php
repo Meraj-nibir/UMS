@@ -25,12 +25,13 @@
         <br>Last Name:<?php echo $lname;?>
         <br>Email:<?php echo $email;?>
         <br>Gender:<?php echo $gender;?>
+        <br>Address:<?php echo $address;?>
         <br>Profile Picture:
         <br><img src="<?php echo $_FILES;?>" width="100px" height="100px">
         <br>
         <br>
         <tr>
-            <td><a href="..\Control\logout.php">Log out</a></td>
+            <td><a href="FacultyHome.php"><input type="button" class="button" value="Back"></a></td>
         </tr>
         <?php
             include '..\..\Layout\footer.php';

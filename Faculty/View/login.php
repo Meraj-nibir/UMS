@@ -24,7 +24,7 @@ include ('../control/Login_control.php');
                         Email:
                     </td>
                     <td>
-                        <input type="text" name="email"> <?php echo $emailerror ?>
+                        <input type="text" placeholder="Email" name="email"> <?php echo $emailerror ?>
                     </td>
                 </tr>
                 <tr>
@@ -32,7 +32,7 @@ include ('../control/Login_control.php');
                         Password:
                     </td>
                     <td>
-                        <input type="password" name="pass"> <?php echo $passerror ?>
+                        <input type="password" placeholder="Password" name="pass"> <?php echo $passerror ?>
                     </td>
                 </tr>
                 <tr>

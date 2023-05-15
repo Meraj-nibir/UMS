@@ -1,3 +1,16 @@
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#p1").toggle();
+  });
+});
+
+$(document).ready(function(){
+  setInterval(function(){
+      var date = new Date();
+      var datetime = date.toLocaleString();
+      $('#datetime').html(datetime);
+  },1000);
+});
 
 function validateForm(){
   var firstName = document.getElementById("fname").value;
@@ -37,24 +50,17 @@ function validateForm(){
 
 
 
-
-function fetchUsers(){
-var email = document.getElementById("email").value;
-
-var xttp= new XMLHttpRequest();
-xttp.onreadystatechange = function(){
-  if(this.readyState == 4 && this.status== 200)
-  {
- document.getElementById("print").innerHTML=this.responseText;
+function search(){
+  var email = document.getElementById("email").value;
+  var xttp= new XMLHttpRequest();
+  xttp.onreadystatechange = function(){
+    if(this.readyState == 4 && this.status== 200)
+    {
+      document.getElementById("print").innerHTML=this.responseText;
+    }
   }
-}
 
-
-
-xttp.open("POST", "http://localhost/control/searchuser.php", true);
-xttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-xttp.send("email="+email);
-
-
-
+  xttp.open("POST", "http://localhost/Project/Admin/Control/searchUser.php", true);
+  xttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+  xttp.send("email="+email);
 }

@@ -6,19 +6,19 @@
 
     $mydb = new MyDB();
     $conobj = $mydb->openCon();
-    $result = $mydb->getUserinfo("admin",$email,$conobj);
+    $result = $mydb->getUserinfo("faculty",$email,$conobj);
 
     if($result->num_rows>0)
     {
         while($row = $result->fetch_assoc())
         {
-            $fname=$row["Firstname"];
-            $mname=$row["Middlename"]; 
+            $fname=$row["Firstname"]; 
             $lname=$row["Lastname"];
             $gender=$row["Gender"];
             $phone=$row["Phone"]; 
             $address=$row["Address"]; 
-            $password=$row["pass"];
+            $pass=$row["Password"];
+
         }
 
     }
@@ -26,17 +26,17 @@
 
     if(isset($_REQUEST["Update"]))
     {
-
         $mydb = new Mydb();
         $conobj = $mydb->openCon();
-        $result=$mydb->updateAdmin("admin",$conobj, $_REQUEST["firstname"],
-        $_REQUEST["middlename"], 
+        $result=$mydb->updateFaculty("faculty",$conobj,  
+        $_REQUEST["firstname"], 
         $_REQUEST["lastname"],
         $_REQUEST["gender"],
         $_REQUEST["phone"],
-        $_REQUEST["address"], 
-        $_REQUEST["email"], 
-        $_REQUEST["pass"],);
-        echo"Success";
+        $_REQUEST["address"],  
+        $_REQUEST["pass"],
+        $_REQUEST['email']);
+
+        echo"success";
     }
 ?>

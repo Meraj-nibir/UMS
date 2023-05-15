@@ -15,7 +15,7 @@
                     <ul>
                         <li><a href="ShowAlladmin.php">View All Admin</a></li>
                         <li><a href="profile.php">View Profile</a></li>
-                        <li><a href="SearchAdmin.php">Search Admin</a></li>
+                        <li><a href="searchAdmin.php">Search Admin</a></li>
                     </ul>
             </div>
             <div class="section">

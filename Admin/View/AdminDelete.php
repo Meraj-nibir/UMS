@@ -1,3 +1,3 @@
 <?php
-include ("../Control/Admin_delete_control.php")
+include ("..\Control\Admin_delete_control.php");
 ?>

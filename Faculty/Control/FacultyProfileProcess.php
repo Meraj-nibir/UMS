@@ -9,7 +9,7 @@
 
     $mydb=new MyDB();
     $conobj=$mydb->openCon();
-    $result=$mydb->getUserInfo("Admin",$_SESSION["email"],$conobj);
+    $result=$mydb->getUserInfo("faculty",$_SESSION["email"],$conobj);
     
     if($result->num_rows>0){
         

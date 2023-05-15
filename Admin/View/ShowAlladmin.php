@@ -28,7 +28,7 @@
                     echo "<td>".$row["Address"]."</td>";
                     echo "<td>".$row["File"]."</td>" ;
                     echo "<td>"."<a href ='AdminUpdate.php?email=".$row["Email"]."'><input type='button' class='button edit' value='Edit'></a>"."</td>" ;
-                    echo "<td>"."<a href ='AdiminDelete.php?email=".$row["Email"]."'><input type='button'class='button reset' value='Delete'></a>"."</td>" ;
+                    echo "<td>"."<a href ='AdminDelete.php?email=".$row["Email"]."'><input type='button'class='button reset' value='Delete'></a>"."</td>" ;
                     echo "</tr>";
                     
                 }

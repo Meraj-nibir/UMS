@@ -25,8 +25,8 @@
                     echo "<td>".$row["Email"]."</td>";
                     echo "<td>".$row["Gender"]."</td>";
                     echo "<td>".$row["Address"]."</td>";
-                    echo "<td>"."<a href ='AdminUpdate.php?email=".$row["Email"]."'><input type='button' class='button edit' value='Edit'></a>"."</td>" ;
-                    echo "<td>"."<a href ='AdiminDelete.php?email=".$row["Email"]."'><input type='button'class='button reset' value='Delete'></a>"."</td>" ;
+                    echo "<td>"."<a href ='FacultyUpdate.php?email=".$row["Email"]."'><input type='button' class='button edit' value='Edit'></a>"."</td>" ;
+                    echo "<td>"."<a href ='FacultyDelete.php?email=".$row["Email"]."'><input type='button'class='button reset' value='Delete'></a>"."</td>" ;
                     echo "</tr>";
                     
                 }
